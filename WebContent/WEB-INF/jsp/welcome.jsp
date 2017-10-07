@@ -8,5 +8,7 @@
 </head>
 <body>
 welcome ${username}
+register ${firstname}
 </body>
+
 </html>
