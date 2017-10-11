@@ -9,6 +9,7 @@
             <link href="bootstrap.min.css" rel="stylesheet">
         </head>
         <body>
+        <jsp:include page="logo.jsp" />
         <div class="container">
         <div class="row">
         <div class="col-md-4"></div>

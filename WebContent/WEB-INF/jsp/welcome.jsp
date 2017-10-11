@@ -5,8 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+            <link href="bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
+<jsp:include page="navbar.jsp" />
 welcome ${username}
 register ${firstname}
 </body>

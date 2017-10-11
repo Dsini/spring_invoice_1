@@ -16,8 +16,8 @@ import jbr.springmvc.model.Login;
 //import jbr.springmvc.service.UserService;
 @Controller
 public class LoginController {
-  @Autowired
-  //UserService userService;
+ // @Autowired
+  //UserDao userDao;
   @RequestMapping(value = "/login", method = RequestMethod.GET)
   public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
     ModelAndView mav = new ModelAndView("login");
@@ -29,7 +29,7 @@ public class LoginController {
   public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
   @ModelAttribute("login") Login login) {
     ModelAndView mav = null;
-  //  User user = userService.validateUser(login);
+  //  User user = userDao.validateUser(login);
     if (null != login.getUsername()&& null != login.getUsername()) {
     mav = new ModelAndView("welcome");
     mav.addObject("username", login.getUsername());

@@ -1,5 +1,13 @@
 package jbr.springmvc.model;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.Entity;
+import org.hibernate.annotations.*;
+
+
 public class User {
 	  private String username;
 	  private String password;
@@ -8,6 +16,7 @@ public class User {
 	  private String email;
 	  //private String address;
 	  private int phone;
+	 
 	  public String getUsername() {
 	  return username;
 	  }
@@ -38,7 +47,6 @@ public class User {
 	  public void setEmail(String email) {
 	  this.email = email;
 	  }
-	  
 	  public int getPhone() {
 	  return phone;
 	  }

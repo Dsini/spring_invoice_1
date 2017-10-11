@@ -10,13 +10,26 @@
 
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+         GAURAV AUTO ELECTRICAL
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+      </div>
+    </nav>
+     <div class="container" style="min-height: 200px;">
+    </div>
 <div class="container">
 <div class="row">
 <div class="col-md-2"></div>
       <h1 class="mt-5 text-primary">Welcome To GAURAV AUTO ELECTRICALS</h1>
     </div>
     </div>
-    <div class="container" style="min-height: 300px;">
+    <div class="container" style="min-height: 200px;">
     </div>
  <table align="center">
             <tr>
