@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import jbr.springmvc.model.Login;
 import jbr.springmvc.model.User;
 
-@EnableTransactionManagement
+
 public class UserDaoImpl implements UserDao {
 	
 	private HibernateTemplate hibernateTemplate;
@@ -32,7 +32,7 @@ public class UserDaoImpl implements UserDao {
 		hibernateTemplate.getSessionFactory().openSession().setFlushMode(org.hibernate.FlushMode.AUTO);
 		hibernateTemplate.saveOrUpdate(user);
 	}
-@Transactional
+
 	@Override
 	public User validateUser(Login login) {
 		// TODO Auto-generated method stub
