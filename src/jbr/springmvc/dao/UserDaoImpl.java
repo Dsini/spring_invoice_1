@@ -26,11 +26,11 @@ public class UserDaoImpl implements UserDao {
 		this.hibernateTemplate = new HibernateTemplate(sessionFactory);
 	}
 	
-@Transactional
+	@Transactional(readOnly = false)
 	@Override
 	public void saveUser(User user) {
 		hibernateTemplate.getSessionFactory().openSession().setFlushMode(org.hibernate.FlushMode.AUTO);
-		hibernateTemplate.saveOrUpdate(user);
+		hibernateTemplate.save(user);
 	}
 
 	@Override
