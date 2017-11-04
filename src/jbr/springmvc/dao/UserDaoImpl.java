@@ -1,6 +1,7 @@
 package jbr.springmvc.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Iterator;
 import java.util.List;
 import javax.sql.DataSource;
 
@@ -20,6 +21,7 @@ import jbr.springmvc.model.User;
 public class UserDaoImpl implements UserDao {
 	
 	private HibernateTemplate hibernateTemplate;
+	
 
 	public void setSessionFactory(SessionFactory sessionFactory) 
     {
@@ -29,12 +31,21 @@ public class UserDaoImpl implements UserDao {
 	@Transactional(readOnly = false)
 	@Override
 	public void saveUser(User user) {
-		hibernateTemplate.getSessionFactory().openSession().setFlushMode(org.hibernate.FlushMode.AUTO);
 		hibernateTemplate.save(user);
+		hibernateTemplate.getSessionFactory().openSession().setFlushMode(org.hibernate.FlushMode.COMMIT);
+	
 	}
-
+	@Transactional(readOnly = false)
 	@Override
-	public User validateUser(Login login) {
+	public Boolean validateUser(Login login) {
 		// TODO Auto-generated method stub
-		return null;
+		hibernateTemplate.getSessionFactory().openSession().setFlushMode(org.hibernate.FlushMode.AUTO);
+	List userlist=hibernateTemplate.find("select username, password from User as u where u.password = ? and u.username = ?",login.getPassword(),login.getUsername());
+	Iterator itr = userlist.listIterator();
+	if(itr.hasNext()) {
+		return true;
+		
+	}else {
+		return false;
+	}
 	}}

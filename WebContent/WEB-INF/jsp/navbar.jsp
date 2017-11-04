@@ -14,10 +14,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"> Create Bill</a>
+              <a class="nav-link" href="createBill.htm"> Create Bill</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"> View Bill</a>
+              <a class="nav-link" href="viewBill.htm"> View Bill</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Add Product</a>
@@ -26,7 +26,7 @@
               <a class="nav-link" href="#">Search Product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Logout</a>
+              <a class="nav-link" href="logout.htm">Logout</a>
             </li>
           </ul>
         </div>

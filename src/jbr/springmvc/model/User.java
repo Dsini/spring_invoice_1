@@ -19,7 +19,7 @@ public class User {
 	  private String lastname;
 	  private String email;
 	  //private String address;
-	  private int phone;
+	  private String phone;
 		@Id
 		 @GeneratedValue
 		    @Column(name="ID")
@@ -66,10 +66,10 @@ public class User {
 	  this.email = email;
 	  }
 	  @Column(name="PHONE")
-	  public int getPhone() {
+	  public String getPhone() {
 	  return phone;
 	  }
-	  public void setPhone(int phone) {
+	  public void setPhone(String phone) {
 	  this.phone = phone;
 	  }
 	}

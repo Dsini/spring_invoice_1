@@ -11,7 +11,13 @@
     
     <context:component-scan base-package="jbr.springmvc" />
     <context:annotation-config />
+    <bean id="viewResolver1" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+        <property name="order" value="1"/>
+        <property name="basename" value="views"/>
+    </bean>
+     
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="order" value="2"/>
         <property name="prefix" value="WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
     </bean>
@@ -32,7 +38,8 @@
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.hbm2ddl.auto">create</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				
 			</props>
 		</property>
 	</bean>
@@ -46,7 +53,9 @@
 	<bean id="UserDAO" class="jbr.springmvc.dao.UserDaoImpl">
 		<property name="sessionFactory" ref="mySessionFactory"/>
 	</bean>
-	
+	<bean id="BillDAO" class="jbr.springmvc.dao.BillDaoImpl">
+		<property name="sessionFactory" ref="mySessionFactory"/>
+	</bean>
 	<!--  <bean name=".htm" class="jbr.springmvc.controller.RegistrationController" >
 		<property name="myuserDao" ref="UserDAO" />
 	</bean>  -->

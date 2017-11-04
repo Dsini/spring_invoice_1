@@ -25,7 +25,7 @@ public UserDao getUserDAO() {
 	return UserDAO;
 }
 public void setUserDAO(UserDao userDAO) {
-	UserDAO = userDAO;
+	this.UserDAO = userDAO;
 }
 @RequestMapping(value = "/register", method = RequestMethod.GET)
   public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
